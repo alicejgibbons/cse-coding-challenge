@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}Employee Registration Confirmed{% endblock %}
+{% block head %}
+  {{ super() }}
+{% endblock %}
+{% block content %}
+  <h1>The employee has been registered!</h1>
+  <p>
+    First Name: {{ firstname }}<br/>
+    Last Name: {{ lastname }}<br/>
+    Department: {{ dept }}
+  </p>
+  <a href="/">View all employees</a>
+{% endblock %}

@@ -22,26 +22,27 @@ from models import *
 
 
 @APP.route('/')
-def view_registered_guests():
-    guests = Guest.query.all()
-    return render_template('guest_list.html', guests=guests)
+def view_registered_employees():
+    employees = Employee.query.all()
+    return render_template('employee_list.html', employees=employees)
 
 
 @APP.route('/register', methods = ['GET'])
 def view_registration_form():
-    return render_template('guest_registration.html')
+    return render_template('employee_registration.html')
 
 
 @APP.route('/register', methods = ['POST'])
-def register_guest():
-    name = request.form.get('name')
-    email = request.form.get('email')
+def register_employee():
+    firstname = request.form.get('firstname')
+    lastname = request.form.get('lastname')
+    dept = request.form.get('dept')
 
-    guest = Guest(name, email)
-    DB.session.add(guest)
+    employee = Employee(firstname, lastname, dept)
+    DB.session.add(employee)
     DB.session.commit()
 
-    return render_template('guest_confirmation.html',
-        name=name, email=email)
+    return render_template('employee_confirmation.html',
+        firstname=firstname, lastname=lastname, dept=dept)
     
 
