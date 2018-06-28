@@ -46,3 +46,19 @@ def register_employee():
         firstname=firstname, lastname=lastname, dept=dept)
     
 
+@APP.route('/search', methods = ['GET'])
+def view_employee_search_form():
+    return render_template('employee_search.html')
+
+
+@APP.route('/search', methods = ['POST'])
+def search_employee():
+    empid = request.form.get('empid')
+    print("inside search employee with empid = " + empid)
+
+    #query db for employee with id=empid
+    employee = Employee.query.filter(Employee.id == empid).one()
+    print("Employee returned is named " + str(employee.firstname))
+
+    return render_template('employee_details.html',
+        empid=empid, firstname=employee.firstname, lastname=employee.lastname, dept=employee.dept)

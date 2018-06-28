@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block title %}Employee Details{% endblock %}
+{% block head %}
+  {{ super() }}
+{% endblock %}
+{% block content %}
+  <h1>Employee Details</h1>
+  <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Employee Id</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Department</th>
+          <th>Photo</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{{ empid }}</td>
+          <td>{{ firstname }}</td>
+          <td>{{ lastname }}</td>
+          <td>{{ dept }}</td>
+          <td>{{ photo }}</td>
+        </tr>
+  </table>
+
+  <p class="navbar-btn">
+      <a href="/" class="btn btn-default">List all Employees!</a>
+  </p>
+  <p class="navbar-btn">
+        <a href="/search" class="btn btn-default">Search for another Employee!</a>
+  </p>
+{% endblock %}

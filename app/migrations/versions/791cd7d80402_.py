@@ -23,6 +23,7 @@ def upgrade():
     sa.Column('firstname', sa.String(length=80), nullable=True),
     sa.Column('lastname', sa.String(length=80), nullable=True),
     sa.Column('dept', sa.String(length=120), nullable=True),
+    sa.Column('photo', sa.LargeBinary(), nullable=True),
     sa.PrimaryKeyConstraint('id')
     )
     # ### end Alembic commands ###

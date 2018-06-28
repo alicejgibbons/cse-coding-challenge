@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}Search for an Employee{% endblock %}
+{% block head %}
+  {{ super() }}
+{% endblock %}
+{% block content %}
+<h1>Employee Search</h1>
+<form action="/search" method="POST">
+    <div class="form-group">
+        <label for="empidfield">Employee Id</label>
+        <input type="number" class="form-control" id="empidfield" name="empid"  placeholder="Employee id">
+    </div>
+    <button type="submit" class="btn btn-default">Search</button>
+</form>
+{% endblock %}
