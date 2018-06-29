@@ -1,8 +1,8 @@
 {
 	"cog_face_key":"",
     "db_host":"",
-    "db_server":"",
-	"uid":"",
+	"db_user":"",
+	"db_name":"",
 	"pw":"",
 	"rg":"",
     "storage_name":"",
