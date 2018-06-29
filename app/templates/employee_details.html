@@ -21,14 +21,14 @@
           <td>{{ firstname }}</td>
           <td>{{ lastname }}</td>
           <td>{{ dept }}</td>
-          <td>{{ photo }}</td>
+          <td><img src="{{ photourl }}" width="200px"></td>
         </tr>
   </table>
 
   <p class="navbar-btn">
-      <a href="/" class="btn btn-default">List all Employees!</a>
+      <a href="/" class="btn btn-default">View All Employees</a>
   </p>
   <p class="navbar-btn">
-        <a href="/search" class="btn btn-default">Search for another Employee!</a>
+        <a href="/search" class="btn btn-default">Search for an Employee</a>
   </p>
 {% endblock %}

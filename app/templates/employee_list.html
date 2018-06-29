@@ -22,14 +22,14 @@
     <td>{{ employee.firstname }}</td>
     <td>{{ employee.lastname }}</td>
     <td>{{ employee.dept }}</td>
-    <td>{{ employee.photo }}</td>
+    <td><img src="{{ employee.photourl }}" width="100px"></td>
     </tr>
   {% endfor %}
 </table>
 <p class="navbar-btn">
-  <a href="/register" class="btn btn-default">Register New Employee!</a>
+  <a href="/register" class="btn btn-default">Register New Employee</a>
 </p>
 <p class="navbar-btn">
-    <a href="/search" class="btn btn-default">Search for an Employee!</a>
+    <a href="/search" class="btn btn-default">Search for an Employee</a>
 </p>
 {% endblock %}

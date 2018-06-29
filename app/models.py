@@ -8,11 +8,11 @@ class Employee(DB.Model):
     firstname = DB.Column(DB.String(80))
     lastname = DB.Column(DB.String(80))
     dept = DB.Column(DB.String(120))
-    photo = DB.Column(DB.LargeBinary())
+    photourl = DB.Column(DB.String(160))
 
-    def __init__(self, firstname=None, lastname=None, dept=None, photo=None):
+    def __init__(self, firstname=None, lastname=None, dept=None, photourl=None):
         #id here???????????
         self.firstname = firstname
         self.lastname = lastname
         self.dept = dept
-        self.photo = photo
+        self.photourl = photourl

@@ -1,0 +1,12 @@
+{
+	"cog_face_key":"",
+    "db_host":"",
+    "db_server":"",
+	"uid":"",
+	"pw":"",
+	"rg":"",
+    "storage_name":"",
+    "storage_key":"",
+	"container_name":"",
+	"face_url" : ""
+}

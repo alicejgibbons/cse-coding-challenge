@@ -4,11 +4,12 @@
   {{ super() }}
 {% endblock %}
 {% block content %}
-  <h1>The employee has been registered!</h1>
-  <p>
-    First Name: {{ firstname }}<br/>
-    Last Name: {{ lastname }}<br/>
-    Department: {{ dept }}
+  <h1>{{ firstname }} {{ lastname }} has been registered!</h1>
+  <br/>
+  <p class="navbar-btn">
+      <a href="/search" class="btn btn-default">Search for an Employee</a>
+</p>
+  <p class="navbar-btn">
+      <a href="/" class="btn btn-default">View All Employees</a>
   </p>
-  <a href="/">View all employees</a>
 {% endblock %}
